@@ -16,7 +16,7 @@ const sass = require('gulp-sass')
 };
 
  function serveSass() {
-  return src("app/sass/*.sass")
+  return src("./sass/*.sass")
       .pipe(sass())
       .pipe(dest("./css"))
       .pipe(browserSync.stream());
