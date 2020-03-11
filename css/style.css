@@ -356,20 +356,30 @@ body {
 img {
   max-width: 100%; }
 
-.section-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Yeseva One', cursive; }
-  .section-title__image {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .section-title__image::before, .section-title__image::after {
-      content: '';
-      width: 32px;
-      height: 2px;
-      background-color: #E3B873;
-      margin: 0 10px; }
+.section {
+  padding: 60px; }
+  .section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive; }
+    .section-title__image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-title__image::before, .section-title__image::after {
+        content: '';
+        width: 32px;
+        height: 2px;
+        background-color: #E3B873;
+        margin: 0 10px; }
+  .section-text {
+    max-width: 52.93rem;
+    margin: auto;
+    margin-bottom: 2.78rem;
+    font-size: 1.43rem;
+    line-height: 1.93rem;
+    text-align: center;
+    color: #363636; }
 
 .header {
   position: fixed;
