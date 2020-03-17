@@ -29,4 +29,5 @@ $(document).ready(function () {
   next.css('left', prev.width() + 10 + bullet.width() + 10)
   bullet.css('left', prev.width() + 10)
 
+  new WOW().init();
 });
