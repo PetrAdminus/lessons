@@ -46,7 +46,7 @@ $(document).ready(function () {
         required: true,
         email: true
       }
-    },
+    }, // Сообщения
     messages: {
       userName: {
         required: "Имя обязательно",
@@ -57,6 +57,18 @@ $(document).ready(function () {
         required: "Email обязательно",
         email: "Введите в формате: name@domain.com"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Фотрма отправлена');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        }
+      });
     }
   });
 
