@@ -73,9 +73,9 @@ function fonts(done) {
 function imagemin(done) {
   src('img/**/**')
     .pipe(tinypng({ key: 'vLhCpSRX0ZHWPtZdwyfQ7NwzCGSFmydk', }))
-    .pipe(dest('dist/img/'))
+    .pipe(dest('dist/img/'));
   src('img/**/*.svg')
-    .pipe(dest('dist/img/'))
+    .pipe(dest('dist/img/'));
   done();
 }
 
