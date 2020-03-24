@@ -39,7 +39,7 @@ function buildCSS(done) {
 }
 
 function buildJS(done) {
-  src(['js/**/**.js', '!js/**.min.js'])
+  src(['js/**.js', '!js/**.min.js'])
     .pipe(minify({ext:{
         min:'.js'
       }
@@ -74,7 +74,7 @@ function imagemin(done) {
   src('img/**/**')
     .pipe(tinypng({ key: 'vLhCpSRX0ZHWPtZdwyfQ7NwzCGSFmydk' }))
     .pipe(dest('dist/img/'));
-  src('img/**/*.svg')
+  src('img/**/**.svg')
     .pipe(dest('dist/img/'));
   done();
 }
