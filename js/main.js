@@ -1,6 +1,8 @@
 $(document).ready(function () {
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
+      thanks = $('.modal-thanks'),
+      closeThanks = $('.modal-thanks__close'),
       closeBtn = $('.modal__close');
   
   modalBtn.on('click', function () {
@@ -8,6 +10,9 @@ $(document).ready(function () {
   });
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible')
+  });
+  closeThanks.on('click', function () {
+    thanks.toggleClass('modal-thanks--visible')
   });
 
   var mySwiper = new Swiper ('.swiper-container', {
@@ -64,9 +69,9 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлена');
           $(form)[0].reset();
           modal.removeClass('modal--visible');
+          thanks.addClass('modal-thanks--visible');
         }
       });
     }
